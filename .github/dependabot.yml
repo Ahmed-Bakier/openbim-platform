@@ -1,0 +1,11 @@
+# Keeps the SHA-pinned GitHub Actions in ci.yml up to date (one grouped PR per week).
+# Application dependency updates (uv, pnpm) are configured in Milestone 13 (security).
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      github-actions:
+        patterns: ["*"]
