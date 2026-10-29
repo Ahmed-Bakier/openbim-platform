@@ -29,3 +29,9 @@
    development verification, and CI will test against the pinned production version.
 3. **Version verification:** current stable versions of Next.js, FastAPI, SQLAlchemy, etc. are
    checked against package registries at install time in Milestone 1.
+
+## Milestone 1 notes
+
+- Local verification in this workspace used native PostgreSQL 16 (`sudo pg_ctlcluster 16 main start`)
+  with role `openbim` and databases `openbim` / `openbim_test`. Compose and CI use PostgreSQL 17.
+- The `uv` warning about `UV_NATIVE_TLS` comes from this workspace's environment, not the project.
