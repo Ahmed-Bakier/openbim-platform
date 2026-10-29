@@ -45,10 +45,9 @@ source and license in `tests/fixtures/README.md`.
 ## Before opening a pull request / finishing a milestone
 
 1. `git status` — review every changed file.
-2. Format, lint, type-check, test, and build (commands documented in `README.md` from Milestone 1).
-3. `make verify` — repository hygiene check.
-4. Update the relevant docs and `docs/PROJECT_STATUS.md`.
-5. Record significant technical decisions as an ADR in `docs/decisions/`.
+2. `make format`, then `make check` — hygiene, lint, type-check, tests and build (same as CI).
+3. Update the relevant docs and `docs/PROJECT_STATUS.md`.
+4. Record significant technical decisions as an ADR in `docs/decisions/`.
 
 ## Architecture Decision Records
 
