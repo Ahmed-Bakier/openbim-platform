@@ -1,0 +1,92 @@
+# =============================================================================
+# Secrets & local environment — NEVER commit
+# =============================================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials*.json
+
+# =============================================================================
+# User / confidential BIM data — NEVER commit
+# Only small, license-cleared fixtures under tests/fixtures/ are allowed.
+# =============================================================================
+*.ifc
+*.ifczip
+*.ifcxml
+*.bcf
+*.bcfzip
+*.rvt
+*.rfa
+*.nwd
+*.nwc
+*.nwf
+!tests/fixtures/**/*.ifc
+!tests/fixtures/**/*.ifczip
+!tests/fixtures/**/*.bcf
+!tests/fixtures/**/*.bcfzip
+
+# Local object-storage / upload data
+/data/
+/uploads/
+/storage/
+/minio-data/
+
+# =============================================================================
+# Node / Next.js
+# =============================================================================
+node_modules/
+.next/
+out/
+.turbo/
+.pnpm-store/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.python-version.local
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# =============================================================================
+# Build output, test reports, logs
+# =============================================================================
+dist/
+build/
+coverage/
+playwright-report/
+test-results/
+*.log
+logs/
+
+# =============================================================================
+# OS / editors
+# =============================================================================
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
